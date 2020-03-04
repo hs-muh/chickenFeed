@@ -1,7 +1,7 @@
 ---
 title: "Chicken Feed"
-author: "put your name here"
-date: "2/29/2020"
+author: "Dr. J, Emperor"
+date: "3/03/2020"
 output: html_document
 ---
 
@@ -42,7 +42,7 @@ attach(chickenData)
 
 
 
-### Inference -- Analysis of Variance
+### Inference -- Analysis of Variancegi
 
 
 
