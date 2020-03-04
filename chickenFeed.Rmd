@@ -46,7 +46,7 @@ plot(weight~feed,data=chickenData)
 
 ### Numerical summary
 
-
+ 
 
 ### Inference -- Analysis of Variancegi
 
