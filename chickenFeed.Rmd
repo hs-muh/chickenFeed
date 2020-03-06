@@ -56,9 +56,13 @@ There does not appear to be any relationship between speed and weight
  
 ### Numerical summary
 
+```{r}
+summary(chickenData)
+```
+This is a summary of all the data in chickenData
  
 
-### Inference -- Analysis of Variancegi
+### Inference -- Analysis of Variance
 
 
 
