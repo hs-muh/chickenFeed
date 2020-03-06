@@ -44,13 +44,16 @@ plot(weight~feed,data=chickenData)
 ```
   
   It appears that the feed type has an effect.  Sunflower the best?
-  
+
 ```{r}
 plot(weight~speed,data=chickenData)
 ```
-  
-  There does not appear to be any relation between speed and weight
 
+There does not appear to be any relationship between speed and weight
+
+
+
+ 
 ### Numerical summary
 
  
