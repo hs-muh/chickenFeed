@@ -1,13 +1,16 @@
 ---
 title: "Chicken Feed"
-author: "Dr. J, Emperor"
-date: "3/03/2020"
-output: html_document
+author: "Harun Muhammad"
+date: "3/07/2020"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
+require(tidyverse)
+require(tigerstats)
 ```
 
 ##  Chicken feed study  
@@ -49,6 +52,18 @@ plot(weight~feed,data=chickenData)
 plot(weight~speed,data=chickenData)
 ```
 
+##Now with ggplot - first select the basic data
+
+```{r}
+basicNN <- ggplot(chickenData,aes(x=weight,y=speed))
+```
+##Now add in scatterplot
+
+```{r}
+basicNN + geom_point() + geom_smooth(method = "lm")
+```
+
+
 There does not appear to be any relationship between speed and weight
 
 
@@ -76,4 +91,19 @@ this ANOVA says only feed affects chicken weight
 
 Here is my brilliant conclusion
 
+## Added by Dr K
 
+```{r}
+model2 = aov(weight~feed, data=chickenData)
+anova(model2)
+```
+
+```{r}
+
+summary.aov(model2)
+```
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model2),las=2)
+```
